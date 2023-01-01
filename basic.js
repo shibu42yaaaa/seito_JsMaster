@@ -29,7 +29,7 @@ const test = () => {
 test();
 
 
-// const test = (arg) => {
+const test2 = (arg) => {
   if(sample.length > arg){
     console.log('うんぼぼ');
   } else {
@@ -37,7 +37,7 @@ test();
   }
 };
 // 引数によって結果が変わる
-test(3);
+test2(3);
 
 if(inoki.length > 3) {
     console.log('ボンバイエ！');
