@@ -1,13 +1,39 @@
-// 問題を定義
-const question = '2022年のセリーグ優勝チームは？';
-// 答え
-const answers = [
-  '横浜DeNAベイスターズ', 
-  '東京ヤクルトスワローズ', 
-  '阪神タイガース', 
-  '中日ドラゴンズ'
+const quiz = [
+{
+  question: '2022年のセリーグ優勝チームは？',
+  answers: [
+    '横浜DeNAベイスターズ', 
+    '東京ヤクルトスワローズ', 
+    '阪神タイガース', 
+    '中日ドラゴンズ'
+  ],
+  correc: '東京ヤクルトスワローズ'
+},
+{
+question: '2022年のセリーグ本塁打王は？',
+  answers: [
+    '村神', 
+    '村上', 
+    '山川', 
+    '阿部慎之助'
+  ],
+  correc: '村上'
+},
+{
+question: '2022年に球界で流行ったダンスは？',
+  answers: [
+    'うさぎダンス', 
+    'ハムダンス', 
+    'キツネダンス', 
+    'マツケンサンバ'
+  ],
+  correc: 'キツネダンス'
+}
 ];
-const correct = '東京ヤクルトスワローズ';
+
+const quizLength = quiz.length;
+let quizIndex = 0;
+
 const $button = document.getElementsByTagName('button'); 
 const buttonLength = $button.Length;
 
