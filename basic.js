@@ -20,7 +20,7 @@ if(sample.length > 3){
 //関数
 const test = () => {
   if(sample.length > 3){
-    console.log('うんぼぼ');
+       console.log('うんぼぼ');
   } else {
     console.log('ぐふふ')
   }
