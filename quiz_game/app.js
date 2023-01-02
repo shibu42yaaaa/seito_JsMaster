@@ -23,35 +23,27 @@ const setupQuiz = () => {
 // 定義した値を呼ぶ
 setupQuiz();
 
+const clickHandler = (e) =>{
+  if(correct === e.target.textContent){
+    window.alert('正解！');
+  } else {
+    window.alert('残念。。');
+  }
+};
+
 // ボタンがクリックされたら生後判定
-$button[0].addEventListener('click', () => {
-    if(correct === $button[0].textContent){
-      window.alert('正解！');
-    } else {
-      window.alert('残念。。');
-    }
+$button[0].addEventListener('click', (e) => {
+    clickHandler(e);
 });
 
-$button[1].addEventListener('click', () => {
-    if(correct === $button[1].textContent){
-      window.alert('正解！');
-    } else {
-      window.alert('残念。。');
-    }
+$button[1].addEventListener('click', (e) => {
+    clickHandler(e);
 });
 
-$button[2].addEventListener('click', () => {
-    if(correct === $button[2].textContent){
-      window.alert('正解！');
-    } else {
-      window.alert('残念。。');
-    }
+$button[2].addEventListener('click', (e) => {
+    clickHandler(e);
 });
 
-$button[3].addEventListener('click', () => {
-    if(correct === $button[3].textContent){
-      window.alert('正解！');
-    } else {
-      window.alert('残念。。');
-    }
+$button[3].addEventListener('click', (e) => {
+    clickHandler(e);
 });
