@@ -8,10 +8,35 @@ const answers = [
   '中日ドラゴンズ'
 ];
 const correct = '東京ヤクルトスワローズ';
+const $button = document.getElementsByTagName('button'); 
+const buttonLength = $button.Length;
 
-document.getElementById('js-question').textContent = question;
+const setupQuiz = () => {
+    document.getElementById('js-question').textContent = question; 
+    
+    let buttonIndex = 0;
+    while(buttonIndex < buttonLength){
+      $button[buttonIndex].textContent = answers[buttonIndex];
+      buttonIndex++;
+    }
+}
+// 定義した値を呼ぶ
+setupQuiz();
 
-document.getElementsByTagName('button')[0].textContent = answers[0];
-document.getElementsByTagName('button')[1].textContent = answers[1];
-document.getElementsByTagName('button')[2].textContent = answers[2];
-document.getElementsByTagName('button')[3].textContent = answers[3];
+const clickHandler = (e) =>{
+  if(correct === e.target.textContent){
+    window.alert('正解！');
+  } else {
+    window.alert('残念。。');
+  }
+};
+
+// ボタンがクリックされたら生後判定
+let handlerIndex = 0;
+while (handlerIndex < buttonLength) {
+  $button[handlerIndex].addEventListener('click', (e) => {
+    clickHandler(e);
+  });
+  handlerIndex++;
+}
+
